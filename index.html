@@ -136,13 +136,5 @@
 
 
 <script>
-  // 페이지 경로와 리퍼러를 함께 전송
-  fetch("/api/add-view", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      page: location.pathname || "/",
-      ref: document.referrer || "-"
-    })
-  }).catch(()=>{});
+fetch("/api/add-view", { method: "POST" });
 </script>

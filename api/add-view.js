@@ -19,8 +19,8 @@ export default async function handler(req, res) {
     body: JSON.stringify({
       parent: { database_id: NOTION_DB },
       properties: {
-        Page: { title: [{ text: { content: String(page) } }] },
-        Date: { date: { start: new Date().toISOString() } },
+        page: { title: [{ text: { content: String(page) } }] },
+        date: { date: { start: new Date().toISOString() } },
         Referrer: ref === "-" ? undefined : { rich_text: [{ text: { content: String(ref) } }] }
       },
     }),
